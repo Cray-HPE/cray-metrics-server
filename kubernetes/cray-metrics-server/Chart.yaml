@@ -14,9 +14,9 @@ sources:
 - https://github.com/Cray-HPE/cray-metrics-server
 - https://github.com/kubernetes-sigs/metrics-server
 - https://github.com/Cray-HPE/container-images/
-dependencies:
-- name: metrics-server
-  version: 0.3.6
+# dependencies:
+# - name: metrics-server
+#  version: 0.3.6
 #  repository: "https://kubernetes-sigs.github.io/metrics-server/"
 maintainers:
 - name: Bo Quan
