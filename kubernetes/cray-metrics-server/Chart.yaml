@@ -1,7 +1,25 @@
 #
-# Copyright 2020 Hewlett Packard Enterprise Development LP
+# Copyright 2021 Hewlett Packard Enterprise Development LP
 #
-apiVersion: v1
+apiVersion: v2
 version: 0.1.2
 name: cray-metrics-server
-appVersion: 0.1.0
+description: Container resource metrics for k8s built-in autoscaling pipelines
+keywords:
+- metrics-server
+home: https://github.com/Cray-HPE/cray-metrics-server
+sources:
+- https://github.com/kubernetes-sigs/metrics-server
+dependencies:
+- name: metrics-server
+  version: "0.3.6"
+  repository: "https://github.com/kubernetes-sigs/metrics-server/tree/master/charts/metrics-server"
+maintainers:
+- name: Bo Quan
+  url: https://github.com/bo-quan
+appVersion: 0.3.6
+annotations:
+  artifacthub.io/images: |
+    - name: curl
+      image: artifactory.algol60.net/csm-docker/stable/docker.io/curlimages/curl:7.73.0
+  artifacthub.io/license: MIT

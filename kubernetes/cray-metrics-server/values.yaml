@@ -1,5 +1,5 @@
 #
-# Copyright 2020 Hewlett Packard Enterprise Development LP
+# Copyright 2021 Hewlett Packard Enterprise Development LP
 #
 # Default values for cray-metrics-server
 # This is a YAML-formatted file.
@@ -7,7 +7,12 @@
 
 nameOverride: ""
 fullnameOverride: ""
-imagesHost: "dtr.dev.cray.com"
+imagesHost: "artifactory.algol60.net"
 
 crayMetricsServer:
-  serverImage: "k8s.gcr.io/metrics-server:v0.3.6"
+  serverImage: "artifactory.algol60.net/csm-docker/stable/k8s.gcr.io/metrics-server:v0.3.6"
+
+image:
+  repository: artifactory.algol60.net/csm-docker/stable/k8s.gcr.io/metrics-server
+  # tag defaults to chart appVersion
+  pullPolicy: Always
