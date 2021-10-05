@@ -26,7 +26,7 @@ spec:
         emptyDir: {}
       containers:
       - name: metrics-server
-        image: {{ include "cray-metrics-server.image-prefix" . }}{{ .Values.crayMetricsServer.serverImage }}
+        image: {{ include "cray-metrics-server.image-prefix" . }}{{ .Values.image.repository }}
         args:
           - --cert-dir=/tmp
           - --secure-port=4443
