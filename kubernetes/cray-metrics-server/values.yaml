@@ -9,5 +9,5 @@ nameOverride: ""
 fullnameOverride: ""
 image:
   repository: k8s.gcr.io/metrics-server
-  # tag defaults to chart appVersion
+  tag: 0.5.0
   pullPolicy: Always
