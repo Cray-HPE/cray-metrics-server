@@ -13,7 +13,7 @@ chart_setup:
 
 chart_package:
 		helm dep up ${CHART_PATH}/${NAME}
-		helm package ${CHART_PATH}/${NAME} -d ${CHART_PATH}/.packaged --version ${CHART_VERSION}
+		helm package ${CHART_PATH}/${NAME} -d ${CHART_PATH}/.packaged --version 1.0.0
 
 chart_test:
 		helm lint "${CHART_PATH}/${NAME}"
