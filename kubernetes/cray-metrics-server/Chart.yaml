@@ -2,7 +2,7 @@
 # Copyright 2021 Hewlett Packard Enterprise Development LP
 #
 apiVersion: v2
-version: 0.1.2
+version: 0.2.0
 name: cray-metrics-server
 description: Container resource metrics for k8s built-in autoscaling pipelines
 keywords:
@@ -16,12 +16,12 @@ sources:
 - https://github.com/Cray-HPE/container-images/
 dependencies:
 - name: metrics-server
-  version: 2.11.4
+  version: 3.5.0
   repository: https://kubernetes-sigs.github.io/metrics-server/
 maintainers:
 - name: Bo Quan
   url: https://github.com/bo-quan
-appVersion: 0.3.6
+appVersion: 0.5.0
 annotations:
   artifacthub.io/images: |
     - name: curl
