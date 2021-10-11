@@ -6,21 +6,21 @@ version: 0.2.0
 name: cray-metrics-server
 description: Container resource metrics for k8s built-in autoscaling pipelines
 keywords:
-- metrics-server
-- metrics
-- metricsserver
+  - kubernetes
+  - metrics-server
+  - metrics
 home: https://github.com/Cray-HPE/cray-metrics-server
 sources:
-- https://github.com/Cray-HPE/cray-metrics-server
-- https://github.com/kubernetes-sigs/metrics-server
-- https://github.com/Cray-HPE/container-images/
+  - https://github.com/Cray-HPE/cray-metrics-server
+  - https://github.com/kubernetes-sigs/metrics-server
+  - https://github.com/Cray-HPE/container-images/
 dependencies:
   - name: metrics-server
     version: 3.5.0
     repository: https://kubernetes-sigs.github.io/metrics-server/
 maintainers:
-- name: Bo Quan
-  url: https://github.com/bo-quan
+  - name: Bo Quan
+    url: https://github.com/bo-quan
 appVersion: "v0.5.0"
 annotations:
   artifacthub.io/images: |
