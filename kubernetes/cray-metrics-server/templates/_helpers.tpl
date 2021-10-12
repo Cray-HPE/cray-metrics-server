@@ -34,13 +34,3 @@ Create chart name and version as used by the chart label.
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 
-{{/*
-Get an image prefix
-*/}}
-{{- define "cray-metrics-server.image-prefix" -}}
-{{- if .Values.image.repository -}}
-{{- printf "%s/" .Values.image.repository | trunc 63 -}}
-{{- else -}}
-{{- printf "" -}}
-{{- end -}}
-{{- end -}}

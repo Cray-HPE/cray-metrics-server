@@ -8,7 +8,7 @@
 nameOverride: ""
 fullnameOverride: ""
 image:
-  repository: k8s.gcr.io/metrics-server
+  repository: artifactory.algol60.net/csm-docker/stable/k8s.gcr.io/metrics-server
   # tag defaults to chart appVersion
   pullPolicy: Always
 

@@ -1,5 +1,5 @@
 {{- /*
-Copyright 2020 Hewlett Packard Enterprise Development LP
+Copyright 2021 Hewlett Packard Enterprise Development LP
 */ -}}
 ---
 apiVersion: apps/v1
@@ -26,7 +26,8 @@ spec:
         emptyDir: {}
       containers:
       - name: metrics-server
-        image: {{ include "cray-metrics-server.image-prefix" . }}{{ .Values.image.repository }}
+        image: {{ .Values.image.repository }}:{{ default .Chart.AppVersion .Values.image.tag }}
+        imagePullPolicy: {{ .Value.image.pullPolicy }}
         args:
           - --cert-dir=/tmp
           - --secure-port=4443
