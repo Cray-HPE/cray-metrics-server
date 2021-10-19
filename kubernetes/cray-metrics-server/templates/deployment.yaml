@@ -27,7 +27,7 @@ spec:
       containers:
       - name: metrics-server
         image: {{ .Values.image.repository }}:{{ default .Chart.AppVersion .Values.image.tag }}
-        imagePullPolicy: {{ .Value.image.pullPolicy }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
         args:
           - --cert-dir=/tmp
           - --secure-port=4443
