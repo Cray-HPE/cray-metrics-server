@@ -13,7 +13,7 @@ home: https://github.com/Cray-HPE/cray-metrics-server
 sources:
   - https://github.com/kubernetes-sigs/metrics-server
 maintainers:
-  - name: Bo Quan
+  - name: bo-quan
     url: https://github.com/bo-quan
 appVersion: "v0.3.6"
 annotations:
