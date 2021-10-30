@@ -11,12 +11,3 @@ image:
   repository: artifactory.algol60.net/csm-docker/stable/k8s.gcr.io/metrics-server
   # tag defaults to chart appVersion
   pullPolicy: Always
-
-securityContext:
-  allowPrivilegeEscalation: false
-  capabilities:
-    drop: ["all"]
-  readOnlyRootFilesystem: true
-  runAsGroup: 65534
-  runAsNonRoot: true
-  runAsUser: 65534

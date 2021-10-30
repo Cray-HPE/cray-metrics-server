@@ -18,6 +18,6 @@ maintainers:
 appVersion: "v0.3.6"
 annotations:
   artifacthub.io/images: |
-    - name: curl
-      image: artifactory.algol60.net/csm-docker/stable/docker.io/curlimages/curl:7.73.0
+    - name: metrics-server
+      image: artifactory.algol60.net/csm-docker/stable/k8s.gcr.io/metrics-server:v0.3.6
   artifacthub.io/license: MIT

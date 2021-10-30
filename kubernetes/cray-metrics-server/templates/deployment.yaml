@@ -38,10 +38,12 @@ spec:
           containerPort: 4443
           protocol: TCP
         securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop: ["all"]
           readOnlyRootFilesystem: true
           runAsNonRoot: true
           runAsUser: 1000
-        imagePullPolicy: Always
         volumeMounts:
         - name: tmp-dir
           mountPath: /tmp
