@@ -11,13 +11,7 @@ keywords:
   - metrics
 home: https://github.com/Cray-HPE/cray-metrics-server
 sources:
-  - https://github.com/Cray-HPE/cray-metrics-server
   - https://github.com/kubernetes-sigs/metrics-server
-  - https://github.com/Cray-HPE/container-images/
-#dependencies:
-#  - name: metrics-server
-#    version: 3.5.0
-#    repository: https://kubernetes-sigs.github.io/metrics-server/
 maintainers:
   - name: Bo Quan
     url: https://github.com/bo-quan
