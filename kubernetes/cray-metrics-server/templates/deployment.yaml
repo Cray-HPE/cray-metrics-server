@@ -1,5 +1,5 @@
 {{- /*
-Copyright 2020 Hewlett Packard Enterprise Development LP
+Copyright 2021 Hewlett Packard Enterprise Development LP
 */ -}}
 ---
 apiVersion: apps/v1
@@ -26,7 +26,8 @@ spec:
         emptyDir: {}
       containers:
       - name: metrics-server
-        image: {{ include "cray-metrics-server.image-prefix" . }}{{ .Values.crayMetricsServer.serverImage }}
+        image: {{ .Values.image.repository }}:{{ default .Chart.AppVersion .Values.image.tag }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
         args:
           - --cert-dir=/tmp
           - --secure-port=4443
@@ -37,10 +38,12 @@ spec:
           containerPort: 4443
           protocol: TCP
         securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop: ["all"]
           readOnlyRootFilesystem: true
           runAsNonRoot: true
           runAsUser: 1000
-        imagePullPolicy: Always
         volumeMounts:
         - name: tmp-dir
           mountPath: /tmp
