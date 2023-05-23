@@ -2,7 +2,7 @@
 # Copyright 2021 Hewlett Packard Enterprise Development LP
 #
 apiVersion: v2
-version: 0.4.0
+version: 0.4.1
 name: cray-metrics-server
 description: Container resource metrics for k8s built-in autoscaling pipelines
 keywords:
