@@ -8,6 +8,6 @@
 nameOverride: ""
 fullnameOverride: ""
 image:
-  repository: artifactory.algol60.net/csm-docker/stable/k8s.gcr.io/metrics-server
+  repository: artifactory.algol60.net/csm-docker/stable/registry.k8s.io/metrics-server/metrics-server
   # tag defaults to chart appVersion
   pullPolicy: IfNotPresent
